@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage("Build") {
-            steps {
-               echo "this is jenkins"
-            }
-        }
         stage("Dotnet Install") {
             steps {
                echo "this is jenkins"
