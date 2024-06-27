@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages {
+        stage("Build") {
+            steps {
+               echo "this is jenkins"
+            }
+        }
+        stage("Dotnet Install") {
+            steps {
+               echo "this is jenkins"
+            }
+        }
+        stage("Dotnet Restore") {
+            steps {
+                sh "Dotnet Restore"
+            }
+        }
+        stage("Dotnet Build") {
+            steps {
+                sh "dotnet build -c release -o /opt"
+            }
+        }
+    }
+}
